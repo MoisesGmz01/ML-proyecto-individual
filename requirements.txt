@@ -1,0 +1,12 @@
+fastapi
+numpy
+pandas
+uvicorn
+pyarrow
+fastparquet
+scikit-learn
+matplotlib
+matplotlib-inline
+surprise
+textblob
+regex
