@@ -1,7 +1,7 @@
 import pandas as pd
 
-dataset=pd.read_parquet(r'C:\Users\Moises\Desktop\Projecto invidual 1\archivos limpios\data_final.parquet')
-df_developer=pd.read_parquet(r'C:\Users\Moises\Desktop\Projecto invidual 1\archivos limpios\games.parquet')
+dataset=pd.read_parquet('archivos limpios/data_final.parquet')
+df_developer=pd.read_parquet('archivos limpios/games.parquet')
 
 #Funcion 1
 df_1=df_developer[['developer','release_date','price','title']]
@@ -43,7 +43,7 @@ def user_info(user: str):
                 'Usuario': user,
                 'Dinero gastado': df['price'].sum(),
                 'cantidad de items': df['items_count'].head(1).to_list()[0],
-                'Porcentaje de recomendaciones': f'{float(round((df['recommend'].sum()/df["items_count"].head(1).to_list()[0])*100,2))}%'
+                'Porcentaje de recomendaciones': f'{float(round((df["recommend"].sum()/df["items_count"].head(1).to_list()[0])*100,2))}%'
             }
 
         return resultado
@@ -65,7 +65,7 @@ def developer_of_year(year: int):
         respuesta.index+=1
         return respuesta
     else:
-        respuesta = f'Error: inserte un año que se encuentre en el rango {df_3['release_date'].min()} - {df_3['release_date'].max()}'
+        respuesta = f'Error: inserte un año que se encuentre en el rango {df_3["release_date"].min()} - {df_3["release_date"].max()}'
     return respuesta
 
 #Funcion 4
@@ -83,7 +83,7 @@ def review_developer(dev: str):
         return {'No ingreso un valor relevante, o el desarrollador no tiene Resenias'}
 
 #Funcion 5
-df_5=pd.read_parquet(r'C:\Users\Moises\Desktop\Projecto invidual 1\archivos limpios\criterio3.parquet')
+df_5=pd.read_parquet('archivos limpios/criterio3.parquet')
 
 def user_for_genre(gen: str):
     try:
