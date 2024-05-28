@@ -13,30 +13,30 @@ user_reviews: Proporciona detalles sobre las reseñas realizadas por los usuario
 user_items: Ofrece información sobre la actividad de los usuarios en la plataforma Steam.
 
 
-##Descripcion del proyecto
+## Descripcion del proyecto
 
-###1. Ingeniería de Datos y Desarrollo de API
+### 1. Ingeniería de Datos y Desarrollo de API
 ETL: Se realizó la limpieza inicial y el formateo del conjunto de datos para asegurar su correcta lectura. Se implementó un análisis de sentimiento utilizando NLP para crear la columna 'opinion', lo que optimiza el rendimiento de la API y el entrenamiento de los modelos de machine learning.
 
 API con FastAPI: Se propuso y desarrolló una API utilizando FastAPI que permite realizar diversas consultas sobre los datos disponibles, ofreciendo información sobre desarrolladores, usuarios, géneros y juegos.
 
 Despliegue: La API está desplegada y accesible para ser consumida desde la web, utilizando el servicio Render, siguiendo el tutorial disponible en el repositorio.
 
-###2. Análisis Exploratorio de Datos (EDA) y Modelos de Machine Learning
+### 2. Análisis Exploratorio de Datos (EDA) y Modelos de Machine Learning
 Análisis Exploratorio: Se llevó a cabo un análisis exploratorio de los datos para comprender mejor las relaciones entre las variables del conjunto de datos, identificando outliers, anomalías y patrones interesantes para análisis posteriores.
 
 Modelos de Recomendación: Se implementó al menos uno de los dos tipos de sistemas de recomendación: ítem-ítem y usuario-ítem. Estos modelos permiten sugerir juegos similares basados en la similitud entre ítems o usuarios.
 
-#Funcionalidades Principales de la API
+# Funcionalidades Principales de la API
 
-La API ofrece las siguientes funcionalidades:
+## La API ofrece las siguientes funcionalidades:
 
-**developer**: Proporciona la cantidad de ítems y el porcentaje de contenido gratuito por año según la empresa desarrolladora.
-**userdata**: Devuelve el dinero gastado por un usuario, el porcentaje de recomendación basado en reseñas y la cantidad de ítems.
-**UserForGenre**: Retorna el usuario con más horas jugadas en un género dado y una lista de la acumulación de horas jugadas por año de lanzamiento.
-**best_developer_year**: Devuelve el top 3 de desarrolladores con más juegos recomendados por usuarios en un año dado.
-**developer_reviews_analysis**: Proporciona un análisis de reseñas de usuarios, categorizadas como positivas o negativas, para un desarrollador específico.
-**recomendacion_juego**: Recibe el ID de un juego y devuelve una lista con 5 juegos recomendados similares.
+**developer** : Proporciona la cantidad de ítems y el porcentaje de contenido gratuito por año según la empresa desarrolladora.
+**userdata** : Devuelve el dinero gastado por un usuario, el porcentaje de recomendación basado en reseñas y la cantidad de ítems.
+**UserForGenre** : Retorna el usuario con más horas jugadas en un género dado y una lista de la acumulación de horas jugadas por año de lanzamiento.
+**best_developer_year** : Devuelve el top 3 de desarrolladores con más juegos recomendados por usuarios en un año dado.
+**developer_reviews_analysis** : Proporciona un análisis de reseñas de usuarios, categorizadas como positivas o negativas, para un desarrollador específico.
+**recomendacion_juego** : Recibe el ID de un juego y devuelve una lista con 5 juegos recomendados similares.
 
 
 Modelo de Machine Learning
